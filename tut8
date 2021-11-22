@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tank 1990</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="border: 1px solid black; height: 190px; width:190px; background-color: black;">
+        <img id="tank" 
+        src="https://is2-ssl.mzstatic.com/image/thumb/Purple122/v4/7b/6f/40/7b6f4073-5f39-4b8c-6ad4-c12b38ec5bf0/source/0x0ss-85.png" 
+        style="position: absolute; top: 0px; left: 0px;" 
+        width="19" 
+        height="19">
+    </div>
+
+    <div class="container">
+        <input type="button" onclick="move_tank('up')" value="&#8593;">
+        <br>
+        <input type="button" onclick="move_tank('left')" value="&#8592;">
+        <input type="button" onclick="move_tank('right')" value="&#8594;">
+        <br>
+        <input type="button" onclick="move_tank('down')" value="&#8595;">
+    </div>
+    
+    <script>
+        function move_tank(str) {
+            var step=19;
+            switch(str) {
+                case "down":
+                    var x = document.getElementById("tank").offsetTop;
+                    x = x + step;
+                    document.getElementById("tank").style["top"] =x+'px';
+                break;
+
+                case "up":
+                    var x = document.getElementById("tank").offsetTop;
+                    x = x - step;
+                    document.getElementById("tank").style["top"]=x+'px';
+                break;
+
+                case "left":
+                    var y = document.getElementById("tank").offsetLeft;
+                    y = y - step;
+                    document.getElementById("tank").style["left"]=y+'px';
+                break;
+
+                case "right":
+                    var y = document.getElementById("tank").offsetLeft;
+                    y = y + step;
+                    document.getElementById("tank").style["left"]=y+'px';
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
