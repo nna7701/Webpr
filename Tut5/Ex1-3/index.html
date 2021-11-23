@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+a {
+  cursor: pointer;
+}
+
+a.button {
+  padding: 10px 15px;
+  border: 2px solid white;
+  border-radius: 100px;
+}
+
+a.button:hover {
+  background-color: white;
+  color: black;
+}
+
+body {
+  color: rgba(26, 26, 26, .7);
+  font-family: 'Lora', serif;
+  margin: 0;
+}
+
+.button,
+#details h1,
+footer address,
+header h1 strong,
+#links {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#details {
+  display: flex;
+  justify-content: space-between;
+}
+
+#details div {
+  width: calc(50% - 20px);
+}
+
+#details img {
+  width: 100%;
+}
+
+#details h1 {
+  color: rgb(61, 153, 145);
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+footer {
+  background-color: rgb(31, 31, 31);
+  color: rgba(255, 255, 255, .8);
+  padding: 75px;
+  text-align: center;
+}
+
+footer p {
+  color: rgba(255, 255, 255, .4);
+}
+
+h1 a.button {
+  border: 0;
+  background-color: rgb(54, 179, 168);
+}
+
+h1 a.button:hover {
+  background-color: rgba(54, 179, 168, 0.75);
+  color: inherit;
+}
+
+header {
+  color: white;
+  background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-weight: normal;
+  text-align: center;
+  z-index: 1;
+}
+
+header h1 a {
+  font-size: 15px;
+}
+
+header h1 em {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+header h1 strong {
+  font-size: 68px;
+  letter-spacing: 4px;
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  font-size: 14px;
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#links a {
+  margin: 15px;
+}
+
+#logo {
+  font-size: 40px;
+}
+
+#main p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 125px;
+  width: 60%;
+}
+
+#main h1 {
+  font-size: 28px;
+  font-weight: normal;
+  color: rgba(26,26,26,.9);
+}
+
+p {
+  line-height: 36px;
+}
+
+section {
+  margin: 100px 125px;
+  text-align: center;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo">
+          CS 193x
+        </div>
+        <div id="links">
+          <a>Home</a>
+          <a>About</a>
+          <a>News</a>
+          <a>Read Me</a>
+          <a class="button">Take Action</a>
+        </div>
+      </nav>
+
+      <h1>
+        <em>Sustainability</em><br/>
+        <strong>Starts With You</strong><br/>
+        <a class="button">Learn More</a>
+      </h1>
+
+    </header>
+    <section>
+      <div id="main">
+        <h1>We conserve land through outreach, restoration, and research.</h1>
+        <p>
+          Some of the Earth's greatest landscapes are threatened by increased road construction, oil and gas exploration, and mining. We aim to protect these areas from inappropriate development, but we cannot achieve our goals alone. Find out how you can help.
+        </p>
+      </div>
+
+      <div id="details">
+        <div>
+          <img src="https://web.stanford.edu/class/archive/cs/cs193x/cs193x.1176/lectures/05/images/body-image-1.jpg" />
+          <h1>About</h1>
+          <p>
+            Find out about our organization, mission, our methods, and the results of our decades of advocacy.
+          </p>
+        </div>
+        <div>
+          <img src="https://web.stanford.edu/class/archive/cs/cs193x/cs193x.1176/lectures/05/images/body-image-2.jpg" />
+          <h1>Take Action</h1>
+          <p>
+            Ready to take the next step? You can become a contributor to our cause, or participate yourself.
+          </p>
+        </div>
+      </div>
+
+    </section>
+    <footer>
+      <address>CS193X, Shriram Center 104 </address>
+      <p>Powered by competence</p>
+    </footer>
+  </body>
+</html>
