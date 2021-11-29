@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8</title>
+</head>
+<body>
+    <script>
+        let input = '';
+        while (input == '') {
+            input = prompt('Enter a number');
+        }
+        input = parseFloat(input);
+        let process = isPosInt(input);
+        alert(process);
+        
+        function isPosInt(number) {
+            if (number > 0 && Number.isInteger(number) == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

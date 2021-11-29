@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5</title>
+</head>
+<body>
+    <script>
+        let input = '';
+        while (input == '') {
+            input = prompt('Enter a number');
+        }
+        input = parseFloat(input);
+        let process = factorial(input);
+        alert('The answer is ' + process);
+        
+        function factorial(number) {
+            let factorial = 1;
+            for (let i = 1; i <= number; i++) {
+                factorial = factorial * i;     
+            }
+            return factorial;
+        }
+
+    </script>
+</body>
+</html>

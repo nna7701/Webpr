@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverse Number</title>
+</head>
+<body>
+    <script>
+        let value = '';
+        while (!value.match(/^[0-9]+$/)) {
+            value = prompt('Nhap vao 1 so');
+        }
+        let inNumber = 0;
+        while (value != 0) {
+            let remain = value % 10;
+            inNumber = (inNumber * 10) + remain;
+            value = parseInt(value/10);
+        }
+        alert('So dao nguoc la ' + inNumber);
+    </script>
+</body>
+</html>

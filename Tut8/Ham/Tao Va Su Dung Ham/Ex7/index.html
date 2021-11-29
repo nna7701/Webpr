@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7</title>
+</head>
+<body>
+    <script>
+        let a, b, c = '';
+        while (a == '' || b == '' || c == '') {
+            a = prompt('Enter the first number');
+            b = prompt('Enter the second number');
+            c = prompt('Enter the third number');
+        }
+        a = parseFloat(a);
+        b = parseFloat(b);
+        c = parseFloat(c);
+        let process = min(a, b, c);
+        alert('The smallest number is ' + process);
+        
+        function min(num1, num2, num3) {
+            let minNum = Math.min(num1, num2, num3);
+            return minNum;
+        }
+
+    </script>
+</body>
+</html>

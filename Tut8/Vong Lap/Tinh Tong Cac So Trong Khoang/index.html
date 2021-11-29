@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Sum</title>
+</head>
+<body>
+    <script>      
+        let a, b = '';
+        while (a == '' || b == '') {
+            a = prompt('Enter integer a');
+            b = prompt('Enter integer b');        
+        }
+        a = parseInt(a);
+        b = parseInt(b);
+        let total = 0;
+        for(let i = a; i <= b; i++) {
+            total += i;
+        }
+        alert('Sum of the numbers from ' + a + ' to ' + b + ' is: ' + total);
+    </script>
+</body>
+</html>

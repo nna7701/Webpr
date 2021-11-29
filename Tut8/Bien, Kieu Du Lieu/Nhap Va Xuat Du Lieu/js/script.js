@@ -1,0 +1,2 @@
+let yourName = prompt("Hãy nhập tên của bạn");
+alert("Xin chào " + yourName);

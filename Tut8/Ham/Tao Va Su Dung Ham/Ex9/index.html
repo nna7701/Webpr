@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex9</title>
+</head>
+<body>
+    <script>
+        let ask = confirm('Do you want to add number?');
+        let array = [];
+        let x = 0;
+        let y = 2;
+        while (ask) {
+            let input = prompt('Enter an integer number');
+            if (!input.match(/^[0-9]+$/)) {
+                alert('You should enter integer number');  
+            } else {
+                array[x] = input;
+                x++;
+                ask = confirm('Do you want to add number[' + y + ']?');
+                y++;                
+            }
+        }
+        alert('Your original array is: ' + array + '\n' + 'The reversed array is ' + array.sort(function () {
+            return -1;
+        }));
+
+    </script>
+</body>
+</html>

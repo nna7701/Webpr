@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+    <script>
+        let starArray = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let secondStarArray = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa', 'Major', 'Leo'];
+        let starInput = prompt('Enter the star');
+        let process = haveStar(starInput, secondStarArray, starArray);
+        alert(process);
+
+        function haveStar(star, secondArr, firstArr) {
+            let flag = 0;
+            for (let i = 0; i < firstArr.length; i++) {
+                if (firstArr[i] == star) {
+                    flag = 1;
+                    break;
+                }
+            }
+            for (let i = 0; i < secondArr.length; i++) {
+                if (secondArr[i] == star) {
+                    flag = 1;
+                    break;
+                }
+            }
+            
+            if (flag == 1) {
+                return 'There is the star named "' + star + '"';
+            } else {
+                return 'There is not the star named "' + star + '"';
+            }
+        }
+    </script>
+</body>
+</html>

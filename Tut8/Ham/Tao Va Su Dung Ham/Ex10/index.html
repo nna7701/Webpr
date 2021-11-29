@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex10</title>
+</head>
+<body>
+    <script>
+        let ask = confirm('Do you want to add character in array?');
+        let array = [];
+        let inputArray = '';
+        let inputChar = '';
+        let x = 0;
+        let y = 2;
+        while (ask) {
+            inputArray = prompt('Enter a character in array');
+            if (inputArray.length > 1 || inputArray == '') {
+                alert('You should enter only a character');  
+            } else {
+                array[x] = inputArray;
+                x++;
+                ask = confirm('Do you want to add character[' + y + '] in array?');
+                y++;
+            }
+        }
+        while (inputChar.length > 1 || inputChar == '') {
+            inputChar = prompt('Enter the character');
+        }
+        let process = isIn(array, inputChar);
+        alert(process);
+
+        function isIn(a, char) {
+            let count = 0;
+            let flag = 0;
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] == char) {
+                    flag = 1;
+                    count++;
+                }
+            }
+            if (flag == 1) {
+                return count;   
+            } else {
+                return -1;
+            }
+        }
+    </script>
+</body>
+</html>

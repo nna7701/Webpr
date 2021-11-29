@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Checking</title>
+</head>
+<body>
+    <p>Nhập số</p>
+    <input type="number" name="number" id="number">
+    <button onclick="display()">Kiểm tra</button>
+    <script>
+        let numberInput = document.getElementById('number');
+
+        function display(){
+            let number = parseInt(numberInput.value);
+            let result = (number % 2 == 0) ? number + ' là một số chẵn' : number + ' là một số lẻ';
+            alert(result);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Score</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 70px;
+        }
+        
+        input{
+            width: 70px;
+        }
+
+        #result{
+            color: #ff090a;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tính điểm ĐH khối D</h2>
+    <p>
+        <label for="math">Môn Toán</label>
+        <input type="number" name="math" id="math">
+    </p>
+    <p>
+        <label for="lit">Môn Văn</label>
+        <input type="number" name="lit" id="lit">
+    </p>
+    <p>
+        <label for="eng">Môn Anh</label>
+        <input type="number" name="eng" id="eng">
+    </p>
+    <p>
+        <label for="area">Khu vực</label>
+        <select name="area" id="area">
+            <option value="KV1">KV1</option>
+            <option value="KV2">KV2</option>
+            <option value="KV2-NT">KV2-NT</option>
+            <option value="KV3">KV3</option>
+        </select>
+    </p>
+    <button onclick="calc()">Tính điểm</button>
+    <p id="result"></p>
+    
+    <script>
+        let mathInput = document.getElementById('math');
+        let litInput = document.getElementById('lit');
+        let engInput = document.getElementById('eng');
+        let areaInput = document.getElementById('area');
+        let result = document.getElementById('result');
+
+        
+
+        function calc(){
+            let areaPoint;
+            let math = parseFloat(mathInput.value);
+            let lit = parseFloat(litInput.value);
+            let eng = parseFloat(engInput.value);
+            let area = areaInput.value;
+            switch (area) {
+                case 'KV1':
+                    areaPoint = 0.75;
+                    break;
+                case 'KV2-NT':
+                    areaPoint = 0.5;
+                    break;
+                case 'KV2':
+                    areaPoint = 0.25;
+                    break;
+                case 'KV3':
+                    areaPoint = 0;
+                    break;
+            }
+            result.innerText = 'Tổng điểm ĐH khối D của bạn là: ' + (math + lit + eng + areaPoint);
+        }
+    </script>
+</body>
+</html>

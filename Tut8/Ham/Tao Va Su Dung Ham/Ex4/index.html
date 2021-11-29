@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+</head>
+<body>
+    <script>
+        let input = '';
+        while (input == '') {
+            input = prompt('Enter the radius');
+        }
+        input = parseFloat(input);
+        let areaCalc = area(input);
+        let perimeterCalc = perimeter(input);
+        alert('The area of the circle is ' + areaCalc + '\n' + 'The perimeter of the circle is ' + perimeterCalc);
+        
+        function area(radius) {
+            let area = 2 * radius * Math.PI;
+            return area;
+        }
+
+        function perimeter(radius) {
+            let perimeter = radius * radius * Math.PI;
+            return perimeter;
+        }
+    </script>
+</body>
+</html>

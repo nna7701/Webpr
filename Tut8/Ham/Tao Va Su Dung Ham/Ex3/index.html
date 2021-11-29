@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square</title>
+</head>
+<body>
+    <script>
+        let input = '';
+        while (input == '') {
+            input = prompt('Enter a number');
+        }
+        input = parseFloat(input);
+        let process = square(input);
+        alert('The answer is ' + process);
+        
+        function square(number) {
+            let square = Math.pow(number, 2);
+            return square;
+        }
+    </script>
+</body>
+</html>
